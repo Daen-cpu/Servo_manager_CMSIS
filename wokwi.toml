@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "Debug/servo_manager.hex"
+elf = "Debug/servo_manager.elf"

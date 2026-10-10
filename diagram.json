@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "author": "daen_cpu",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-stm32-bluepill",
+      "id": "stm32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": 170,
+      "left": 340,
+      "attrs": {
+        "hornColor": "blue"
+      }
+    },
+    {
+      "type": "wokwi-logic-analyzer",
+      "id": "logic1",
+      "top": 340,
+      "left": 330,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "stm32:A0",
+      "servo1:PWM",
+      "green",
+      [
+        "h120",
+        "v150"
+      ]
+    ],
+    [
+      "stm32:5V.1",
+      "servo1:V+",
+      "red",
+      [
+        "h180",
+        "v210"
+      ]
+    ],
+    [
+      "stm32:GND.1",
+      "servo1:GND",
+      "black",
+      [
+        "h160",
+        "v240"
+      ]
+    ],
+    [
+      "stm32:A3",
+      "$serialMonitor:TX",
+      "green",
+      []
+    ],
+    [
+      "$serialMonitor:RX",
+      "stm32:A2",
+      "green",
+      []
+    ],
+    [
+      "stm32:A0",
+      "logic1:D0",
+      "orange",
+      []
+    ],
+    [
+      "stm32:GND.1",
+      "logic1:GND",
+      "black",
+      []
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf",
+    "convertEol": true
+  },
+  "dependencies": {}
+}
