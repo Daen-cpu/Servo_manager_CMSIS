@@ -166,7 +166,4 @@ The firmware configures the system clock, GPIO, USART2, and TIM2 directly throug
 
 The implementation is intended for educational purposes and as a foundation for further bare-metal embedded development.
 
-## License
-
-No license has been specified yet. Add a `LICENSE` file before distributing or reusing the project publicly. If you want others to be able to use, modify, and redistribute the code, consider an open-source license such as MIT.
 
